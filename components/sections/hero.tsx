@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
-import { Volume2, VolumeX, Loader2 } from "lucide-react";
+import { Volume2, VolumeX, Loader2, Play } from "lucide-react";
 import { calculateAge, YIBU_BIRTH_DATE } from "@/lib/age";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
@@ -16,15 +16,42 @@ const VIDEO_SOURCES = {
 // 断点：lg = 1024px
 const BREAKPOINT_LG = 1024;
 
+// 加载超时时间（毫秒）
+const LOADING_TIMEOUT = 15000; // 15秒
+
 export function Hero() {
   const { t, i18n } = useTranslation();
   const [isMuted, setIsMuted] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [posterLoaded, setPosterLoaded] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
+  const [loadTimeout, setLoadTimeout] = useState(false);
   const [currentVideoSrc, setCurrentVideoSrc] = useState(VIDEO_SOURCES.mobile);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const age = calculateAge(YIBU_BIRTH_DATE, i18n.language as 'zh' | 'en');
+
+  // 清理超时计时器
+  const clearLoadingTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
+
+  // 启动超时计时器
+  const startLoadingTimeout = () => {
+    clearLoadingTimeout();
+    setShowLoading(true);
+    setLoadTimeout(false);
+    
+    timeoutRef.current = setTimeout(() => {
+      setShowLoading(false);
+      setLoadTimeout(true);
+      console.log('Video load timeout after 15s, hiding loader');
+    }, LOADING_TIMEOUT);
+  };
 
   // 监听窗口大小变化，切换视频源
   useEffect(() => {
@@ -34,7 +61,8 @@ export function Hero() {
       
       if (newSrc !== currentVideoSrc) {
         setCurrentVideoSrc(newSrc);
-        setVideoLoaded(false); // 切换视频时重置加载状态
+        setVideoLoaded(false);
+        startLoadingTimeout(); // 切换视频时重新开始计时
       }
     };
 
@@ -43,8 +71,17 @@ export function Hero() {
 
     // 监听 resize
     window.addEventListener('resize', updateVideoSource);
-    return () => window.removeEventListener('resize', updateVideoSource);
+    return () => {
+      window.removeEventListener('resize', updateVideoSource);
+      clearLoadingTimeout();
+    };
   }, [currentVideoSrc]);
+
+  // 组件加载时启动超时计时器
+  useEffect(() => {
+    startLoadingTimeout();
+    return () => clearLoadingTimeout();
+  }, []);
 
   // 视频源变化时重新加载
   useEffect(() => {
@@ -70,6 +107,19 @@ export function Hero() {
 
   const handleVideoLoad = () => {
     setVideoLoaded(true);
+    setShowLoading(false);
+    clearLoadingTimeout();
+  };
+
+  const handleManualPlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play().then(() => {
+        setVideoLoaded(true);
+        setLoadTimeout(false);
+      }).catch(() => {
+        // 播放失败
+      });
+    }
   };
 
   return (
@@ -94,7 +144,7 @@ export function Hero() {
         {/* 第3层：响应式视频 */}
         <video
           ref={videoRef}
-          key={currentVideoSrc} // key 变化会强制重新创建 video 元素
+          key={currentVideoSrc}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
           autoPlay
           muted
@@ -113,15 +163,26 @@ export function Hero() {
         {/* 遮罩层 */}
         <div className="absolute inset-0 bg-black/25" />
         
-        {/* 加载指示器 */}
-        {!videoLoaded && (
+        {/* 加载指示器（15秒超时后自动隐藏） */}
+        {showLoading && (
           <div className="absolute bottom-6 right-6 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-sm text-white/70 text-xs">
             <Loader2 className="h-3 w-3 animate-spin" />
             <span>{t('hero.loading')}</span>
           </div>
         )}
         
-        {/* 静音按钮 */}
+        {/* 超时后显示手动播放按钮 */}
+        {loadTimeout && !videoLoaded && (
+          <button
+            onClick={handleManualPlay}
+            className="absolute bottom-6 right-6 z-20 flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 backdrop-blur-sm text-white/90 hover:bg-black/60 transition-all text-xs"
+          >
+            <Play className="h-3 w-3" />
+            <span>{t('hero.playVideo') || '播放视频'}</span>
+          </button>
+        )}
+        
+        {/* 静音按钮（视频加载成功后显示） */}
         {videoLoaded && (
           <button
             onClick={toggleMute}

@@ -12,7 +12,8 @@
     "cta": "Get to Know Me",
     "loading": "Loading...",
     "mute": "Mute",
-    "unmute": "Unmute"
+    "unmute": "Unmute",
+    "playVideo": "Play Video"
   },
   "about": {
     "title": "About Me",

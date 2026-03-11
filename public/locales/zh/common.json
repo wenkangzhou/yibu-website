@@ -12,7 +12,8 @@
     "cta": "认识我",
     "loading": "加载中...",
     "mute": "静音",
-    "unmute": "取消静音"
+    "unmute": "取消静音",
+    "playVideo": "播放视频"
   },
   "about": {
     "title": "关于我",

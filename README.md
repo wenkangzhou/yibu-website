@@ -144,5 +144,5 @@ Made with ❤️ for Yibu
 
 <p align="center">
   <a href="https://github.com/wenkangzhou/yibu-website">GitHub</a> •
-  <a href="https://yibu-website.vercel.app">Live Demo</a>
+  <a href="https://yibuu.com/">Live Demo</a>
 </p>
