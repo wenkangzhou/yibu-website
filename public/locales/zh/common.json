@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我",
+    "hobbies": "我的爱好",
+    "achievements": "我的成就",
+    "works": "我的作品"
+  },
+  "hero": {
+    "greeting": "嗨，我是周翌步！",
+    "subtitle": "一个{{age}}的活力小男孩，喜欢小车、乐高、阅读和运动！",
+    "cta": "认识我",
+    "loading": "加载中...",
+    "mute": "静音",
+    "unmute": "取消静音"
+  },
+  "about": {
+    "title": "关于我",
+    "name": "周翌步",
+    "birthday": "出生于2021年8月30日",
+    "ageLabel": "年龄",
+    "school": "虹桥海富幼儿园",
+    "class": "蝴蝶班（中班）",
+    "languages": "双语：中文和英文",
+    "description": "我是周翌步，一个充满活力的小男孩，喜欢探索周围的世界。我喜欢用乐高搭建、阅读有趣的书籍，还通过运动保持活力。"
+  },
+  "hobbies": {
+    "title": "我的爱好",
+    "cars": {
+      "title": "玩具小车",
+      "description": "我喜欢各种各样的玩具车！赛车、工程车、急救车——应有尽有！"
+    },
+    "lego": {
+      "title": "乐高搭建",
+      "description": "我搭建过各种乐高城市系列6岁以下套装，还有法拉利赛车等。我喜欢创造自己的世界！"
+    },
+    "reading": {
+      "title": "阅读",
+      "description": "最近最爱读'Who Would Win'系列！描述两种动物的特点，最后进行搏斗，看谁能赢。太刺激了！"
+    },
+    "sports": {
+      "title": "运动",
+      "description": "我喜欢运动！两岁多就能走很远的路，三岁在班级两公里跑步比赛中获得冠军，现在在学习骑自行车！"
+    }
+  },
+  "achievements": {
+    "title": "我的成就",
+    "lego": {
+      "title": "乐高大师",
+      "description": "完成了各种乐高城市系列搭建，包括法拉利赛车"
+    },
+    "running": {
+      "title": "跑步冠军",
+      "description": "3岁时在班级两公里跑步比赛中获得第一名！"
+    },
+    "walking": {
+      "title": "小小行者",
+      "description": "两岁多的时候就能走很远很远的路"
+    },
+    "cycling": {
+      "title": "学骑自行车",
+      "description": "正在学习骑自行车，虽然还带着辅助轮"
+    }
+  },
+  "works": {
+    "title": "我的作品",
+    "subtitle": "来看看我的作品吧！",
+    "comingSoon": "即将上线",
+    "placeholder": "更多精彩内容即将添加，敬请期待！",
+    "placeholderTitle": "作品预览",
+    "placeholderImage": "图片占位",
+    "items": {
+      "lego": {
+        "title": "乐高作品集",
+        "desc": "我的创意搭建"
+      },
+      "art": {
+        "title": "绘画作品",
+        "desc": "色彩和想象"
+      },
+      "crafts": {
+        "title": "手工作品",
+        "desc": "创意手工"
+      },
+      "photos": {
+        "title": "摄影作品",
+        "desc": "记录美好"
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "forYibu": "for Yibu",
+    "copyright": "周翌步的个人网站. 保留所有权利."
+  },
+  "theme": {
+    "toggle": "切换主题",
+    "light": "浅色",
+    "dark": "深色"
+  },
+  "language": {
+    "toggle": "切换语言",
+    "en": "English",
+    "zh": "中文"
+  }
+}

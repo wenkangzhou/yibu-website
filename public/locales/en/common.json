@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "hobbies": "Hobbies",
+    "achievements": "Achievements",
+    "works": "My Works"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Yibu Zhou!",
+    "subtitle": "A {{age}} energetic boy who loves cars, LEGO, reading, and sports!",
+    "cta": "Get to Know Me",
+    "loading": "Loading...",
+    "mute": "Mute",
+    "unmute": "Unmute"
+  },
+  "about": {
+    "title": "About Me",
+    "name": "Yibu Zhou",
+    "birthday": "Born on August 30, 2021",
+    "ageLabel": "Age",
+    "school": "Hongqiao Haifu Kindergarten",
+    "class": "Butterfly Class (Middle Class)",
+    "languages": "Bilingual: Chinese & English",
+    "description": "I'm Yibu Zhou, a lively little boy who loves exploring the world around me. I enjoy building with LEGO, reading interesting books, and staying active through sports."
+  },
+  "hobbies": {
+    "title": "My Hobbies",
+    "cars": {
+      "title": "Toy Cars",
+      "description": "I love all kinds of toy cars! Racing cars, construction vehicles, emergency vehicles - you name it!"
+    },
+    "lego": {
+      "title": "LEGO Building",
+      "description": "I've built various LEGO City sets for ages 6 and under, including Ferrari racing cars. I love creating my own worlds!"
+    },
+    "reading": {
+      "title": "Reading",
+      "description": "My current favorite is the 'Who Would Win' series! It describes two animals and then they battle to see who wins. So exciting!"
+    },
+    "sports": {
+      "title": "Sports",
+      "description": "I love staying active! I could walk long distances since I was 2, won the 2km running race at age 3, and now I'm learning to ride a bike!"
+    }
+  },
+  "achievements": {
+    "title": "My Achievements",
+    "lego": {
+      "title": "LEGO Master Builder",
+      "description": "Completed various LEGO City sets including Ferrari racing cars"
+    },
+    "running": {
+      "title": "Running Champion",
+      "description": "Won 1st place in the class 2km running race at age 3!"
+    },
+    "walking": {
+      "title": "Little Walker",
+      "description": "Could walk very long distances since I was only 2 years old"
+    },
+    "cycling": {
+      "title": "Learning to Cycle",
+      "description": "Currently learning to ride a bicycle with training wheels"
+    }
+  },
+  "works": {
+    "title": "My Works",
+    "subtitle": "Check out my works!",
+    "comingSoon": "Coming Soon",
+    "placeholder": "More exciting content coming soon, stay tuned!",
+    "placeholderTitle": "Work Preview",
+    "placeholderImage": "Image Placeholder",
+    "items": {
+      "lego": {
+        "title": "LEGO Works",
+        "desc": "My Creative Builds"
+      },
+      "art": {
+        "title": "Art Works",
+        "desc": "Colors & Imagination"
+      },
+      "crafts": {
+        "title": "Hand Crafts",
+        "desc": "Creative Crafts"
+      },
+      "photos": {
+        "title": "Photography",
+        "desc": "Capturing Moments"
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "forYibu": "for Yibu",
+    "copyright": "Yibu's Personal Site. All rights reserved."
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "toggle": "Switch language",
+    "en": "English",
+    "zh": "中文"
+  }
+}
