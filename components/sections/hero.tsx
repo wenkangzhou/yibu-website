@@ -81,11 +81,13 @@ export function Hero() {
         
         {/* 第2层：封面图（模糊预览） */}
         <div className={`absolute inset-0 transition-opacity duration-500 ${posterLoaded ? 'opacity-100' : 'opacity-0'}`}>
-          <img
+          <Image
             src="/assets/video-poster.jpg"
-            alt=""
-            className="w-full h-full object-cover blur-sm scale-105"
+            alt="Video poster"
+            fill
+            className="object-cover blur-sm scale-105"
             onLoad={() => setPosterLoaded(true)}
+            priority
           />
         </div>
         
