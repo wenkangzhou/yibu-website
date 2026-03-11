@@ -22,11 +22,13 @@
     "ageLabel": "Age",
     "school": "Hongqiao Haifu Kindergarten",
     "class": "Butterfly Class (Middle Class)",
-    "languages": "Bilingual: Chinese & English",
+    "languagesLabel": "Languages",
+    "languages": "Chinese, English",
     "description": "I'm Yibu Zhou, a lively little boy who loves exploring the world around me. I enjoy building with LEGO, reading interesting books, and staying active through sports."
   },
   "hobbies": {
     "title": "My Hobbies",
+    "subtitle": "Explore My World of Passion",
     "cars": {
       "title": "Toy Cars",
       "description": "I love all kinds of toy cars! Racing cars, construction vehicles, emergency vehicles - you name it!"
@@ -46,6 +48,7 @@
   },
   "achievements": {
     "title": "My Achievements",
+    "subtitle": "Celebrating Every Milestone",
     "lego": {
       "title": "LEGO Master Builder",
       "description": "Completed various LEGO City sets including Ferrari racing cars"
@@ -55,8 +58,8 @@
       "description": "Won 1st place in the class 2km running race at age 3!"
     },
     "walking": {
-      "title": "Little Walker",
-      "description": "Could walk very long distances since I was only 2 years old"
+      "title": "Little Hiker",
+      "description": "Started hiking with mom and dad at age 2, already climbed several mountains!"
     },
     "cycling": {
       "title": "Learning to Cycle",

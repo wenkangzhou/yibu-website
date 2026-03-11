@@ -53,7 +53,7 @@ export function Hobbies() {
             {t('hobbies.title')}
           </h2>
           <p className="max-w-[600px] text-muted-foreground text-lg">
-            探索我热爱的世界
+            {t('hobbies.subtitle')}
           </p>
         </div>
 

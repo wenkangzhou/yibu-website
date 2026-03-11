@@ -2,8 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, School, Users, Languages, Baby } from "lucide-react";
+import { Baby, School, Languages } from "lucide-react";
 import { calculateAge, YIBU_BIRTH_DATE } from "@/lib/age";
 import Image from "next/image";
 
@@ -13,9 +12,8 @@ export function About() {
 
   const infoItems = [
     { icon: Baby, label: t('about.ageLabel'), value: age },
-    { icon: Calendar, label: t('about.birthday'), value: '' },
     { icon: School, label: t('about.school'), value: t('about.class') },
-    { icon: Languages, label: t('about.languages'), value: '' },
+    { icon: Languages, label: t('about.languagesLabel') || '语言能力', value: t('about.languages') },
   ];
 
   return (
@@ -47,22 +45,14 @@ export function About() {
                 </div>
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent>
               <p className="text-muted-foreground leading-relaxed">
                 {t('about.description')}
               </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300">
-                  {age}
-                </Badge>
-                <Badge variant="secondary" className="bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-300">
-                  {t('about.languages')}
-                </Badge>
-              </div>
             </CardContent>
           </Card>
 
-          <div className="grid gap-4">
+          <div className="grid gap-4 content-center">
             {infoItems.map((item, index) => (
               <Card key={index} className="group hover:shadow-md transition-shadow">
                 <CardContent className="p-4 flex items-center gap-4">

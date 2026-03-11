@@ -53,7 +53,7 @@ export function Achievements() {
             {t('achievements.title')}
           </h2>
           <p className="max-w-[600px] text-muted-foreground text-lg">
-            记录成长的每一个精彩瞬间
+            {t('achievements.subtitle')}
           </p>
         </div>
 

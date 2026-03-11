@@ -198,7 +198,7 @@ export function Hero() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center">
         <div className="flex flex-col items-center text-center max-w-3xl py-20">
           {/* 头像 */}
-          <div className="flex flex-col items-center gap-4 mb-6">
+          <div className="mb-6">
             <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ring-white/40 shadow-2xl">
               <Image
                 src="/assets/avatar.JPG"
@@ -207,10 +207,6 @@ export function Hero() {
                 className="object-cover"
                 priority
               />
-            </div>
-            <div className="text-white drop-shadow-lg">
-              <div className="text-base text-white/80 mb-1">{t('about.name')}</div>
-              <div className="text-xl font-medium">{age}</div>
             </div>
           </div>
 

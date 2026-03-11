@@ -22,11 +22,13 @@
     "ageLabel": "年龄",
     "school": "虹桥海富幼儿园",
     "class": "蝴蝶班（中班）",
-    "languages": "双语：中文和英文",
+    "languagesLabel": "语言能力",
+    "languages": "中文、英文",
     "description": "我是周翌步，一个充满活力的小男孩，喜欢探索周围的世界。我喜欢用乐高搭建、阅读有趣的书籍，还通过运动保持活力。"
   },
   "hobbies": {
     "title": "我的爱好",
+    "subtitle": "探索我热爱的世界",
     "cars": {
       "title": "玩具小车",
       "description": "我喜欢各种各样的玩具车！赛车、工程车、急救车——应有尽有！"
@@ -46,6 +48,7 @@
   },
   "achievements": {
     "title": "我的成就",
+    "subtitle": "记录成长的每一个精彩瞬间",
     "lego": {
       "title": "乐高大师",
       "description": "完成了各种乐高城市系列搭建，包括法拉利赛车"
@@ -56,7 +59,7 @@
     },
     "walking": {
       "title": "小小行者",
-      "description": "两岁多的时候就能走很远很远的路"
+      "description": "两岁多就开始和爸爸妈妈徒步，已经爬过好几座山了！"
     },
     "cycling": {
       "title": "学骑自行车",
