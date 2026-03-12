@@ -10,6 +10,7 @@
 ## ✨ 功能特性
 
 - 🎬 **沉浸式视频背景** - 首屏全屏视频，自动切换高清/压缩版本
+- 🗺️ **足迹地图** - 交互式地图展示去过的城市，支持缩放、定位和距离标尺
 - 🌐 **多语言支持** - 中英文双语切换
 - 🌙 **主题切换** - 深色/浅色/系统主题
 - 📱 **响应式设计** - 完美适配桌面端和移动端
@@ -24,6 +25,7 @@
 | 语言 | [TypeScript](https://www.typescriptlang.org/) |
 | 样式 | [Tailwind CSS](https://tailwindcss.com/) |
 | UI 组件 | [shadcn/ui](https://ui.shadcn.com/) |
+| 地图 | [Leaflet](https://leafletjs.com/) + [Carto](https://carto.com/) |
 | 状态管理 | [Zustand](https://zustand-demo.pmnd.rs/) |
 | 国际化 | [i18next](https://www.i18next.com/) |
 | 部署 | [Vercel](https://vercel.com/) |
@@ -40,6 +42,8 @@ yibu/
 │   ├── sections/          # 页面区块组件
 │   │   ├── hero.tsx       # 首屏（视频背景）
 │   │   ├── about.tsx      # 关于我
+│   │   ├── map.tsx        # 足迹地图
+│   │   ├── map-content.tsx # 地图核心组件
 │   │   ├── hobbies.tsx    # 爱好展示
 │   │   ├── achievements.tsx # 成就展示
 │   │   └── works.tsx      # 作品展示
@@ -130,7 +134,14 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
 
 ## 📝 更新日志
 
-### 2024-03-11
+### 2026-03-12
+- 🗺️ 新增交互式足迹地图
+- 🗺️ 基于 Leaflet + Carto 的地图展示
+- 🗺️ 支持 18 个城市标记（中国 14、日本 3、韩国 2）
+- 🗺️ 添加距离标尺和 GPS 定位功能
+- 🗺️ 地图支持缩放和平移交互
+
+### 2026-03-11
 - ✨ 初版发布
 - 🎬 实现响应式视频背景
 - 🌐 添加中英文双语支持

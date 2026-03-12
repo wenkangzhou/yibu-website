@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About Me",
+    "map": "Travel Map",
     "hobbies": "Hobbies",
     "achievements": "Achievements",
     "works": "My Works"
@@ -91,6 +92,17 @@
         "desc": "Capturing Moments"
       }
     }
+  },
+  "map": {
+    "title": "My Travel Map",
+    "subtitle": "Places I've visited with my family",
+    "china": "China",
+    "japan": "Japan",
+    "korea": "Korea",
+    "cities": "cities",
+    "home": "Home",
+    "visited": "Visited",
+    "myHome": "My Home"
   },
   "footer": {
     "madeWith": "Made with",

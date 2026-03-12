@@ -2,6 +2,7 @@
   "nav": {
     "home": "首页",
     "about": "关于我",
+    "map": "我的足迹",
     "hobbies": "我的爱好",
     "achievements": "我的成就",
     "works": "我的作品"
@@ -91,6 +92,17 @@
         "desc": "记录美好"
       }
     }
+  },
+  "map": {
+    "title": "我的足迹",
+    "subtitle": "和爸爸妈妈一起去过的地方",
+    "china": "中国",
+    "japan": "日本",
+    "korea": "韩国",
+    "cities": "个城市",
+    "home": "家乡",
+    "visited": "去过的地方",
+    "myHome": "我的家乡"
   },
   "footer": {
     "madeWith": "Made with",
