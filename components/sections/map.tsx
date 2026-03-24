@@ -27,6 +27,7 @@ const CITIES: Array<{
   { name: "温州", nameEn: "Wenzhou", coordinates: [27.9943, 120.6994], country: "CN" },
   { name: "宁德", nameEn: "Ningde", coordinates: [26.6656, 119.5479], country: "CN" },
   { name: "福州", nameEn: "Fuzhou", coordinates: [26.0745, 119.2965], country: "CN" },
+  { name: "绍兴", nameEn: "Shaoxing", coordinates: [30.0890, 120.5810], country: "CN" },
   // 日本
   { name: "大阪", nameEn: "Osaka", coordinates: [34.6937, 135.5022], country: "JP" },
   { name: "名古屋", nameEn: "Nagoya", coordinates: [35.1815, 136.9066], country: "JP" },
