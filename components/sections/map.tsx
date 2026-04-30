@@ -28,6 +28,7 @@ const CITIES: Array<{
   { name: "宁德", nameEn: "Ningde", coordinates: [26.6656, 119.5479], country: "CN" },
   { name: "福州", nameEn: "Fuzhou", coordinates: [26.0745, 119.2965], country: "CN" },
   { name: "绍兴", nameEn: "Shaoxing", coordinates: [30.0890, 120.5810], country: "CN" },
+  { name: "广州", nameEn: "Guangzhou", coordinates: [23.1291, 113.2644], country: "CN" },
   { name: "湖州", nameEn: "Huzhou", coordinates: [30.8672, 120.1024], country: "CN" },
   { name: "嘉兴", nameEn: "Jiaxing", coordinates: [30.7459, 120.7555], country: "CN" },
   { name: "宁海", nameEn: "Ninghai", coordinates: [29.2884, 121.4307], country: "CN" },
