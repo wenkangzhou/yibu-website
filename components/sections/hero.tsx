@@ -199,7 +199,7 @@ export function Hero() {
           <div className="mb-6">
             <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ring-white/40 shadow-2xl">
               <Image
-                src="/assets/avatar.JPG"
+                src="/assets/optimized/avatar.webp"
                 alt="Yibu Avatar"
                 fill
                 className="object-cover"

@@ -33,7 +33,7 @@ export function About() {
                 {/* 头像 */}
                 <div className="relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-sky-200 dark:ring-sky-800 shrink-0">
                   <Image
-                    src="/assets/avatar.JPG"
+                    src="/assets/optimized/avatar.webp"
                     alt="Yibu Avatar"
                     fill
                     className="object-cover"

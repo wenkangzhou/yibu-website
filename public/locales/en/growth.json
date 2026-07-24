@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Yibu's Growth Record",
+    "description": "A private family growth record based on the K1 first and second semester assessment reports."
+  },
+  "hero": {
+    "badge": "Private Page",
+    "title": "Yibu's Growth Record",
+    "subtitle": "A family-only record compiled from Yibu's K1 first and second semester assessment reports.",
+    "notice": "This page is not shown to the public and has no link from the homepage or navigation."
+  },
+  "overview": {
+    "title": "Overall Portrait",
+    "quote": "Yibu is a child who is rich inside, gentle with others, observant, loves expressing and performing, but needs a little warm-up time when facing unfamiliar changes.",
+    "summary": "Throughout K1, his growth was not a change of personality. His stable traits—sensitivity, caution, rich imagination, interest-driven learning, and high self-expectations—remain. But he has gradually gained more ability to express what is inside, participate, complete tasks, and cooperate with others.",
+    "traits": {
+      "title": "Core Traits",
+      "items": ["Friendly and empathetic", "Expressive", "Imaginative", "Curious explorer", "Slightly cautious with change"]
+    }
+  },
+  "semester": {
+    "title": "Semester Overview",
+    "s1": {
+      "label": "K1 First Semester",
+      "attendance": "118 school days, 111 days present",
+      "highlight": "Starting to try new activities in familiar environments; full of imaginative ideas in art but lacking confidence; math at 7-within addition/subtraction and one-level equivalent exchange; already daring to communicate in English."
+    },
+    "s2": {
+      "label": "K1 Second Semester",
+      "attendance": "92 school days, full attendance",
+      "highlight": "Active expression noticeably released; confident and energetic in art performance; English entering active communication stage; math expanded to 10-within addition/subtraction and number decomposition; stronger overall participation."
+    }
+  },
+  "domains": {
+    "title": "Development by Domain",
+    "subtitle": "Key observations from both semester reports",
+    "items": {
+      "lifeSocial": {
+        "title": "Life Skills & Social Development",
+        "s1": "Able to fold and neatly arrange clothes independently; expresses needs politely to adults; willing to try new activities in familiar settings, but still needs gentle adult reminders when handling peer conflicts.",
+        "s2": "Uses chopsticks independently, understands vegetables and balanced meals; adjusts clothing according to temperature; follows hand-washing, tidying, organizing, and outdoor safety rules; communicates more clearly and confidently, shows genuine empathy, is willing to share, and works with peers to find solutions.",
+        "growth": "From needing reminders to handle conflicts to proactively understanding peers and solving problems together; daily routines have become stable and independence is solid."
+      },
+      "chinese": {
+        "title": "Chinese Language",
+        "s1": "Rich inner ideas, but hesitant to express in front of the group and often needed teacher encouragement; especially loves listening to stories and understands main content; has started turning pages in order.",
+        "s2": "More accurate grasp of story plots and character relationships; willing to raise hand for interesting topics; speaking volume noticeably improved; can recognize his own name and common characters in the classroom environment.",
+        "growth": "Moving from “needing encouragement to express” to “willing to actively release himself”—an important step for a cautious child."
+      },
+      "english": {
+        "title": "English Speaking, Reading & Writing",
+        "s1": "Dared to communicate with teachers and peers in English, clear pronunciation, good phonics, could spell many words; listening attention affected by interest, high-frequency words still needed accumulation.",
+        "s2": "Teacher described his oral progress as “excellent progress”; actively participates in conversations and classroom discussions; stronger independent decoding ability, high-frequency word recognition beginning to form, spelling more accurate and confident.",
+        "growth": "English is shifting from “having learned some knowledge” to “using English as a real communication tool”; neatness and line placement in writing still need continued development."
+      },
+      "art": {
+        "title": "Art & Performance",
+        "s1": "Positive attitude in concert rehearsals and performance, able to follow the group rhythm and bravely express himself on stage; full of imaginative ideas in drawing but often lacked confidence when turning ideas into images, hesitant strokes, messy lines, easily lost patience when coloring.",
+        "s2": "Consistently participates with creativity, confidence, and enthusiasm; in “The Wishing Tree” play, performed the hunter role with confidence, energy, and excellent stage presence, willing to challenge himself during rehearsals.",
+        "growth": "From “many creative ideas but worried about presenting them poorly” to “willing to put himself on stage and be seen”—a real breakthrough in artistic expression and self-confidence."
+      },
+      "science": {
+        "title": "Science Observation & Cognition",
+        "s1": "Full of curiosity and interest in fresh things, often asked questions; in the domino activity, not satisfied with straight lines, actively tried S-shaped and other complex patterns, exploring different methods.",
+        "s2": "When observing silkworms, noticed connections between food intake, leaf preferences, and body growth, understood “eating more leaves means growing bigger,” and could predict subsequent growth stages; also understands social roles such as doctors and nurses.",
+        "growth": "From “I want to try different methods and see what happens” to “I can infer causes and next steps based on what I observe”—observation, prediction, and critical thinking skills are developing."
+      },
+      "math": {
+        "title": "Mathematics & Logic",
+        "s1": "Could sort by external characteristics, try pattern sequencing, count items within 20; could match numbers with objects and do addition/subtraction within 7; could complete one-level equivalent exchange, two-level exchange still challenging.",
+        "s2": "Can do addition/subtraction within 10, count from 1 to 50, understand number order, decompose numbers within 10; recognizes common plane shapes and tries to combine them; interest and participation in math games increased.",
+        "growth": "Progress is not only in expanded calculation range but also in increased willingness to participate and interest in math. Next most important is connecting math to real life."
+      },
+      "pe": {
+        "title": "Physical Development",
+        "s1": "Good at running, tricycle riding, and climbing; balance, coordination, and spatial awareness are solid; ball dribbling control and confidence improving.",
+        "s2": "Steady running gait, able to flexibly change speed and direction; skilled at tricycle riding, willing to challenge longer routes; improved coordination, core strength, and balance in climbing; continuous ball-bouncing rhythm and hand-eye coordination still unstable and need more practice.",
+        "growth": "Large motor skills are a clear strength; ball fine control is a relative short board. Short, frequent ball-bouncing games can help build feel and rhythm."
+      }
+    }
+  },
+  "trajectory": {
+    "title": "Growth Trajectory",
+    "subtitle": "Looking at both semesters together, the changes are very clear",
+    "items": [
+      {
+        "title": "Active Expression",
+        "from": "Rich inner ideas, hesitant in groups, needed teacher encouragement",
+        "to": "Raises hand actively for interesting topics, speaking volume noticeably improved"
+      },
+      {
+        "title": "Artistic Confidence",
+        "from": "Many creative ideas but hesitant strokes, easily lost patience",
+        "to": "Confidently and energetically completed the hunter role on stage"
+      },
+      {
+        "title": "English Communication",
+        "from": "Dared to communicate, good phonics",
+        "to": "Actively participates in discussions, uses English as a communication tool"
+      },
+      {
+        "title": "Math Interest",
+        "from": "Addition/subtraction within 7, one-level equivalent exchange",
+        "to": "Addition/subtraction within 10, number decomposition, stronger participation"
+      },
+      {
+        "title": "Scientific Thinking",
+        "from": "Curious about trying different methods",
+        "to": "Able to observe, connect, and predict causality"
+      },
+      {
+        "title": "Social Cooperation",
+        "from": "Participated in class, conflicts needed reminders",
+        "to": "Confident communication, willing to share, cooperates with peers to solve problems"
+      }
+    ]
+  },
+  "challenges": {
+    "title": "Areas to Continue Supporting",
+    "subtitle": "These are not “weaknesses,” but key growth topics for the next stage",
+    "items": [
+      "Flexibility is still developing when facing changes in rules, plans, or situations;",
+      "He cares a lot about whether he can do well, so unfamiliar tasks have a high startup cost;",
+      "When emotions rise, flexible problem-solving ability is still insufficient;",
+      "Chinese character recognition and active, coherent expression still have much room to grow;",
+      "English high-frequency word accumulation and letter line-placement control need continued practice;",
+      "Ball fine control (continuous bouncing) and balance can continue to strengthen."
+    ],
+    "note": "His difficulty is more accurately: when things are unfamiliar, uncontrollable, or might expose that he can't do well, the startup cost is high. So the most important thing for the next stage is to help him gradually believe—“Not being able to do something yet doesn't mean I'm not a capable child”; “If things don't go my way, I still have ways to continue”; “I can enter slowly, but I don't have to hide forever.”"
+  },
+  "focus": {
+    "title": "Family Focus for This Stage",
+    "subtitle": "Don't spread too wide; focus on three things first",
+    "items": [
+      {
+        "title": "Daily Parent-Child Reading and Chatting",
+        "desc": "Continue supporting Chinese comprehension, active expression, and character accumulation; turn reading into low-pressure conversation so he is willing to share more ideas."
+      },
+      {
+        "title": "A Few Easy Ball-Bouncing Sessions Each Week",
+        "desc": "Short, frequent ball-bouncing games help build feel and rhythm without turning practice into a task."
+      },
+      {
+        "title": "Recognize Time and Do Real-Object Addition/Subtraction in Daily Life",
+        "desc": "Understand yesterday/today/tomorrow, morning/afternoon; recognize clocks; verify addition/subtraction results through blocks, fruit, and toys to connect math with real life."
+      }
+    ]
+  },
+  "downloads": {
+    "title": "Full Assessment Reports",
+    "subtitle": "Original PDF files for family archiving",
+    "s1": "K1 First Semester Assessment Report",
+    "s2": "K1 Second Semester Assessment Report"
+  }
+}

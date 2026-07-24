@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
+import { usePathname } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -16,8 +17,15 @@ const navItems = [
   { key: 'works', href: '#works' },
 ];
 
+function useNavHref(hash: string) {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  return isHome ? hash : `/${hash}`;
+}
+
 export function Navbar() {
   const { t } = useTranslation();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -28,6 +36,8 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const logoHref = pathname === '/' ? '#home' : '/';
 
   return (
     <>
@@ -42,7 +52,7 @@ export function Navbar() {
         <nav className="container mx-auto flex h-16 items-center px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#home" className="flex items-center space-x-2">
+            <a href={logoHref} className="flex items-center space-x-2">
               <span className={`font-bold text-xl transition-colors duration-300 ${
                 scrolled 
                   ? 'bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent' 
@@ -57,17 +67,12 @@ export function Navbar() {
           <div className="hidden md:flex flex-1 items-center justify-between ml-8">
             <div className="flex items-center space-x-1">
               {navItems.map((item) => (
-                <a
+                <NavLink
                   key={item.key}
-                  href={item.href}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
-                    scrolled
-                      ? 'text-foreground/70 hover:text-foreground hover:bg-accent'
-                      : 'text-white/90 hover:text-white hover:bg-white/10 drop-shadow-sm'
-                  }`}
-                >
-                  {t(`nav.${item.key}`)}
-                </a>
+                  item={item}
+                  scrolled={scrolled}
+                  onClick={() => setMobileMenuOpen(false)}
+                />
               ))}
             </div>
             <div className="flex items-center space-x-1">
@@ -120,19 +125,43 @@ export function Navbar() {
           <div className="absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b shadow-lg">
             <div className="container mx-auto px-4 py-3 space-y-1">
               {navItems.map((item) => (
-                <a
+                <NavLink
                   key={item.key}
-                  href={item.href}
-                  className="block px-4 py-3 text-sm font-medium text-foreground/70 rounded-md hover:text-foreground hover:bg-accent transition-colors"
+                  item={item}
+                  mobile
                   onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t(`nav.${item.key}`)}
-                </a>
+                />
               ))}
             </div>
           </div>
         </div>
       )}
     </>
+  );
+}
+
+interface NavLinkProps {
+  item: { key: string; href: string };
+  scrolled?: boolean;
+  mobile?: boolean;
+  onClick?: () => void;
+}
+
+function NavLink({ item, scrolled, mobile, onClick }: NavLinkProps) {
+  const { t } = useTranslation();
+  const href = useNavHref(item.href);
+
+  const baseClasses = mobile
+    ? 'block px-4 py-3 text-sm font-medium text-foreground/70 rounded-md hover:text-foreground hover:bg-accent transition-colors'
+    : `px-4 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
+        scrolled
+          ? 'text-foreground/70 hover:text-foreground hover:bg-accent'
+          : 'text-white/90 hover:text-white hover:bg-white/10 drop-shadow-sm'
+      }`;
+
+  return (
+    <a href={href} className={baseClasses} onClick={onClick}>
+      {t(`nav.${item.key}`)}
+    </a>
   );
 }

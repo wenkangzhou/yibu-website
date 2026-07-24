@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Car, Gamepad2, BookOpen, Trophy } from "lucide-react";
+import { Car, Gamepad2, BookOpen, Trophy, Palette } from "lucide-react";
 
 export function Hobbies() {
   const { t } = useTranslation();
@@ -15,6 +15,14 @@ export function Hobbies() {
       bgGradient: 'from-red-50 to-orange-50/50 dark:from-red-950/30 dark:to-orange-950/20',
       borderColor: 'border-red-100 dark:border-red-800',
       iconBg: 'bg-gradient-to-br from-red-500 to-orange-500',
+    },
+    {
+      key: 'artPerformance',
+      icon: Palette,
+      gradient: 'from-pink-500 to-rose-500',
+      bgGradient: 'from-pink-50 to-rose-50/50 dark:from-pink-950/30 dark:to-rose-950/20',
+      borderColor: 'border-pink-100 dark:border-pink-800',
+      iconBg: 'bg-gradient-to-br from-pink-500 to-rose-500',
     },
     {
       key: 'lego',
@@ -57,7 +65,7 @@ export function Hobbies() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+        <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 max-w-6xl mx-auto">
           {hobbies.map((hobby) => (
             <Card 
               key={hobby.key} 
@@ -66,14 +74,14 @@ export function Hobbies() {
               {/* 装饰背景 */}
               <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full bg-gradient-to-br ${hobby.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`} />
               
-              <CardHeader className="relative">
-                <div className={`h-14 w-14 rounded-2xl ${hobby.iconBg} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                  <hobby.icon className="h-7 w-7 text-white" />
+              <CardHeader className="relative p-4 pb-2">
+                <div className={`h-12 w-12 rounded-2xl ${hobby.iconBg} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                  <hobby.icon className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold">{t(`hobbies.${hobby.key}.title`)}</CardTitle>
+                <CardTitle className="text-lg font-bold">{t(`hobbies.${hobby.key}.title`)}</CardTitle>
               </CardHeader>
-              <CardContent className="relative">
-                <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">
+              <CardContent className="relative p-4 pt-0">
+                <CardDescription className="text-xs leading-relaxed text-muted-foreground/90">
                   {t(`hobbies.${hobby.key}.description`)}
                 </CardDescription>
               </CardContent>

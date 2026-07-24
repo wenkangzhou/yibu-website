@@ -9,7 +9,7 @@
   },
   "hero": {
     "greeting": "Hi, I'm Yibu Zhou!",
-    "subtitle": "A {{age}} energetic boy who loves cars, LEGO, reading, and sports!",
+    "subtitle": "A {{age}} energetic boy who loves art, LEGO, reading, and sports!",
     "cta": "Get to Know Me",
     "loading": "Loading...",
     "mute": "Mute",
@@ -25,7 +25,7 @@
     "class": "Butterfly Class (Middle Class)",
     "languagesLabel": "Languages",
     "languages": "Chinese, English",
-    "description": "I'm Yibu Zhou, a lively little boy who loves exploring the world around me. I enjoy building with LEGO, reading interesting books, and staying active through sports."
+    "description": "I'm Yibu Zhou, a friendly, expressive, and imaginative little boy. I love singing, dancing, drawing, crafts, and performing on stage. I enjoy creating my own little worlds with LEGO, getting lost in books, and exploring the world through running and cycling."
   },
   "hobbies": {
     "title": "My Hobbies",
@@ -36,60 +36,121 @@
     },
     "lego": {
       "title": "LEGO Building",
-      "description": "I've built various LEGO City sets for ages 6 and under, including Ferrari racing cars. I love creating my own worlds!"
+      "description": "I have LEGO class every Monday. I can build from instructions, and I also love creating my own designs with loose bricks, like race cars and storage boxes."
     },
     "reading": {
       "title": "Reading",
-      "description": "My current favorite is the 'Who Would Win' series! It describes two animals and then they battle to see who wins. So exciting!"
+      "description": "Reading is one of my favorite daily activities. Whether in Chinese or English, listening to stories or looking at pictures, I can get completely immersed in books."
     },
     "sports": {
       "title": "Sports",
-      "description": "I love staying active! I could walk long distances since I was 2, won the 2km running race at age 3, and now I'm learning to ride a bike!"
+      "description": "I love running! I joined two youth trail races and did well. I've also taken off my training wheels and can ride my bike confidently in open spaces."
+    },
+    "artPerformance": {
+      "title": "Art & Performance",
+      "description": "I'm very interested in singing, dancing, drawing, crafts, and stage performance. Last semester I played a cowboy, and this semester I played a hunter — I perform with confidence and energy!"
     }
   },
   "achievements": {
     "title": "My Achievements",
     "subtitle": "Celebrating Every Milestone",
     "lego": {
-      "title": "LEGO Master Builder",
-      "description": "Completed various LEGO City sets including Ferrari racing cars"
+      "title": "LEGO Creator",
+      "description": "I can follow instructions to build sets, and I also create my own works with loose bricks, like race cars and a custom storage box."
     },
     "running": {
-      "title": "Running Champion",
-      "description": "Won 1st place in the class 2km running race at age 3!"
+      "title": "Trail Runner",
+      "description": "Joined two youth trail races and achieved great results. I'm becoming more and more confident as I run!"
     },
     "walking": {
       "title": "Little Hiker",
       "description": "Started hiking with mom and dad at age 2, already climbed several mountains!"
     },
     "cycling": {
-      "title": "Learning to Cycle",
-      "description": "Currently learning to ride a bicycle with training wheels"
+      "title": "Cycling Progress",
+      "description": "I've taken off the training wheels and can ride well in open areas. I'm still practicing to ride even more smoothly."
+    },
+    "calligraphy": {
+      "title": "Calligraphy Certificate",
+      "description": "Earned Grade 1 Certificate in Hard-Pen Calligraphy. A year of pen-control practice has greatly improved my Chinese writing."
+    },
+    "artExhibition": {
+      "title": "Museum Exhibition",
+      "description": "My artwork 'Swimming Pool' created at the Museum of Art Pudong workshop was exhibited at the museum for over a month — a truly meaningful experience."
     }
   },
   "works": {
     "title": "My Works",
-    "subtitle": "Check out my works!",
-    "comingSoon": "Coming Soon",
-    "placeholder": "More exciting content coming soon, stay tuned!",
-    "placeholderTitle": "Work Preview",
-    "placeholderImage": "Image Placeholder",
+    "subtitle": "A gallery of creations and memorable moments along my growth journey",
+    "categories": {
+      "all": "All",
+      "performance": "Performance",
+      "art": "Art & Crafts",
+      "lego": "LEGO Creations",
+      "sports": "Sports Moments",
+      "honors": "Honors"
+    },
+    "close": "Close",
     "items": {
-      "lego": {
-        "title": "LEGO Works",
-        "desc": "My Creative Builds"
+      "dramaCowboy": {
+        "title": "Drama: Cowboy",
+        "desc": "Stage performance last semester"
       },
-      "art": {
-        "title": "Art Works",
-        "desc": "Colors & Imagination"
+      "dramaHunter": {
+        "title": "Drama: Hunter",
+        "desc": "Stage performance this semester"
       },
-      "crafts": {
-        "title": "Hand Crafts",
-        "desc": "Creative Crafts"
+      "drawing": {
+        "title": "My Drawing",
+        "desc": "From circles to characters and scenes"
       },
-      "photos": {
-        "title": "Photography",
-        "desc": "Capturing Moments"
+      "legoRaceCar": {
+        "title": "LEGO Race Car",
+        "desc": "A creative car I built myself"
+      },
+      "legoBox": {
+        "title": "DIY Storage Box",
+        "desc": "A practical creation made from loose bricks"
+      },
+      "swimmingPool": {
+        "title": "Artwork: Swimming Pool",
+        "desc": "Created at the Museum of Art Pudong workshop"
+      },
+      "calligraphy": {
+        "title": "Calligraphy Certificate",
+        "desc": "Grade 1 Arts Certificate"
+      },
+      "trailRunning": {
+        "title": "Trail Running",
+        "desc": "Running under the sun"
+      },
+      "nightRace": {
+        "title": "Night Trail Race",
+        "desc": "Sprinting with a headlamp"
+      },
+      "cycling": {
+        "title": "Riding a Bike",
+        "desc": "No more training wheels!"
+      },
+      "runningRace": {
+        "title": "2km Family Run",
+        "desc": "Kindergarten Family Day race with great results"
+      },
+      "hikingYuelu": {
+        "title": "Hiking Yuelu Mountain",
+        "desc": "Climbing with mom and dad"
+      },
+      "hikingMeiwu": {
+        "title": "Hiking Meiwu Ancient Trail",
+        "desc": "Exploring nature on the old trail"
+      },
+      "hikingMidui": {
+        "title": "Hiking Midui Mountain",
+        "desc": "A different mountain challenge"
+      },
+      "hikingYushan": {
+        "title": "Hiking Yushan",
+        "desc": "Enjoying outdoor hiking time"
       }
     }
   },

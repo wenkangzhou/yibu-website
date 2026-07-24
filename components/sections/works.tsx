@@ -1,53 +1,59 @@
 "use client"
 
+import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ImageIcon, Palette, Sparkles } from "lucide-react";
+import Image from 'next/image';
+import { Palette, X } from "lucide-react";
+
+type Category = 'all' | 'performance' | 'art' | 'lego' | 'sports' | 'honors';
+
+interface WorkItem {
+  id: string;
+  key: string;
+  category: Category;
+  src: string;
+  aspectRatio: string;
+}
 
 export function Works() {
   const { t } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState<Category>('all');
+  const [selectedImage, setSelectedImage] = useState<WorkItem | null>(null);
 
-  // 预留的占位卡片数据 - 从翻译文件获取
-  const placeholderWorks = [
-    { 
-      id: 1, 
-      titleKey: 'works.items.lego.title',
-      descKey: 'works.items.lego.desc',
-      color: 'from-pink-500 to-rose-500', 
-      bgColor: 'from-pink-50 to-rose-50 dark:from-pink-950/30 dark:to-rose-950/20', 
-      borderColor: 'border-pink-100 dark:border-pink-800',
-    },
-    { 
-      id: 2, 
-      titleKey: 'works.items.art.title',
-      descKey: 'works.items.art.desc',
-      color: 'from-cyan-500 to-blue-500', 
-      bgColor: 'from-cyan-50 to-blue-50 dark:from-cyan-950/30 dark:to-blue-950/20', 
-      borderColor: 'border-cyan-100 dark:border-cyan-800',
-    },
-    { 
-      id: 3, 
-      titleKey: 'works.items.crafts.title',
-      descKey: 'works.items.crafts.desc',
-      color: 'from-violet-500 to-purple-500', 
-      bgColor: 'from-violet-50 to-purple-50 dark:from-violet-950/30 dark:to-purple-950/20', 
-      borderColor: 'border-violet-100 dark:border-violet-800',
-    },
-    { 
-      id: 4, 
-      titleKey: 'works.items.photos.title',
-      descKey: 'works.items.photos.desc',
-      color: 'from-orange-500 to-red-500', 
-      bgColor: 'from-orange-50 to-red-50 dark:from-orange-950/30 dark:to-red-950/20', 
-      borderColor: 'border-orange-100 dark:border-orange-800',
-    },
+  const categories: { key: Category; labelKey: string }[] = [
+    { key: 'all', labelKey: 'works.categories.all' },
+    { key: 'performance', labelKey: 'works.categories.performance' },
+    { key: 'art', labelKey: 'works.categories.art' },
+    { key: 'lego', labelKey: 'works.categories.lego' },
+    { key: 'sports', labelKey: 'works.categories.sports' },
+    { key: 'honors', labelKey: 'works.categories.honors' },
   ];
+
+  const filteredWorks = useMemo(() => {
+    const works: WorkItem[] = [
+      { id: 'dramaCowboy', key: 'dramaCowboy', category: 'performance', src: '/assets/optimized/performance/戏剧-牛仔.webp', aspectRatio: '2/3' },
+      { id: 'dramaHunter', key: 'dramaHunter', category: 'performance', src: '/assets/optimized/performance/戏剧-猎人.webp', aspectRatio: '2/3' },
+      { id: 'drawing', key: 'drawing', category: 'art', src: '/assets/optimized/art/画画.webp', aspectRatio: '2/3' },
+      { id: 'swimmingPool', key: 'swimmingPool', category: 'art', src: '/assets/optimized/art/艺术作品-游泳馆.webp', aspectRatio: '4/3' },
+      { id: 'legoRaceCar', key: 'legoRaceCar', category: 'lego', src: '/assets/optimized/lego/乐高-赛车.webp', aspectRatio: '4/3' },
+      { id: 'legoBox', key: 'legoBox', category: 'lego', src: '/assets/optimized/lego/乐高-自制收纳盒.webp', aspectRatio: '4/3' },
+      { id: 'calligraphy', key: 'calligraphy', category: 'honors', src: '/assets/optimized/honors/硬笔书法证书.webp', aspectRatio: '3/2' },
+      { id: 'trailRunning', key: 'trailRunning', category: 'sports', src: '/assets/optimized/sports/越野跑.webp', aspectRatio: '2/3' },
+      { id: 'nightRace', key: 'nightRace', category: 'sports', src: '/assets/optimized/sports/越野跑-夜赛.webp', aspectRatio: '3/2' },
+      { id: 'cycling', key: 'cycling', category: 'sports', src: '/assets/optimized/sports/运动-骑自行车-无辅助轮.webp', aspectRatio: '3/4' },
+      { id: 'runningRace', key: 'runningRace', category: 'sports', src: '/assets/optimized/sports/跑步-小班-六一两公里亲子跑.webp', aspectRatio: '4/3' },
+      { id: 'hikingYuelu', key: 'hikingYuelu', category: 'sports', src: '/assets/optimized/sports/徒步-岳麓山.webp', aspectRatio: '3/4' },
+      { id: 'hikingMeiwu', key: 'hikingMeiwu', category: 'sports', src: '/assets/optimized/sports/徒步-梅坞古道.webp', aspectRatio: '3/4' },
+      { id: 'hikingMidui', key: 'hikingMidui', category: 'sports', src: '/assets/optimized/sports/徒步-米堆山.webp', aspectRatio: '3/4' },
+      { id: 'hikingYushan', key: 'hikingYushan', category: 'sports', src: '/assets/optimized/sports/徒步-虞山.webp', aspectRatio: '3/4' },
+    ];
+    return activeCategory === 'all' ? works : works.filter(w => w.category === activeCategory);
+  }, [activeCategory]);
 
   return (
     <section id="works" className="py-20 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-full mb-2">
             <Palette className="h-5 w-5 text-primary" />
           </div>
@@ -59,50 +65,82 @@ export function Works() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-          {placeholderWorks.map((work) => (
-            <Card 
-              key={work.id}
-              className={`group relative overflow-hidden border-2 ${work.borderColor} bg-gradient-to-br ${work.bgColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+        {/* Category filter */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => setActiveCategory(cat.key)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                activeCategory === cat.key
+                  ? 'bg-primary text-primary-foreground shadow-md'
+                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+              }`}
             >
-              {/* 装饰背景 */}
-              <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full bg-gradient-to-br ${work.color} opacity-10 group-hover:opacity-20 transition-opacity duration-500`} />
-              
-              <CardHeader className="relative">
-                <div className="flex items-center justify-between mb-2">
-                  <div className={`h-10 w-10 rounded-xl bg-gradient-to-br ${work.color} flex items-center justify-center shadow-md`}>
-                    <ImageIcon className="h-5 w-5 text-white" />
-                  </div>
-                  <Badge variant="secondary" className="text-xs bg-background/80">
-                    {t('works.comingSoon')}
-                  </Badge>
-                </div>
-                <CardTitle className="text-lg font-bold">{t(work.titleKey)}</CardTitle>
-                <CardDescription className="text-xs">{t(work.descKey)}</CardDescription>
-              </CardHeader>
-              <CardContent className="relative">
-                {/* 图片占位区域 */}
-                <div className="mt-2 flex flex-col items-center justify-center h-32 rounded-xl border-2 border-dashed border-muted-foreground/20 bg-muted/30 group-hover:bg-muted/50 transition-colors overflow-hidden">
-                  <div className={`w-full h-full flex flex-col items-center justify-center bg-gradient-to-br ${work.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/60">
-                    <ImageIcon className="h-10 w-10 mb-2 opacity-50" />
-                    <span className="text-xs font-medium">{t('works.placeholderTitle')}</span>
-                    <span className="text-[10px] text-muted-foreground/40 mt-1">{t('works.placeholderImage')}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              {t(cat.labelKey)}
+            </button>
           ))}
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-muted/50 text-muted-foreground">
-            <Sparkles className="h-4 w-4" />
-            <span className="text-sm">{t('works.placeholder')}</span>
-            <Sparkles className="h-4 w-4" />
-          </div>
+        {/* Masonry gallery */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 max-w-6xl mx-auto">
+          {filteredWorks.map((work) => (
+            <div
+              key={work.id}
+              className="break-inside-avoid mb-4 group relative overflow-hidden rounded-xl bg-muted cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
+              onClick={() => setSelectedImage(work)}
+            >
+              <div className="relative w-full" style={{ aspectRatio: work.aspectRatio }}>
+                <Image
+                  src={work.src}
+                  alt={t(`works.items.${work.key}.title`)}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <h3 className="text-white font-bold text-lg">{t(`works.items.${work.key}.title`)}</h3>
+                  <p className="text-white/90 text-sm">{t(`works.items.${work.key}.desc`)}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors z-10"
+            onClick={() => setSelectedImage(null)}
+            aria-label={t('works.close') || 'Close'}
+          >
+            <X className="h-6 w-6" />
+          </button>
+          <div
+            className="relative w-full max-w-5xl h-[85vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage.src}
+              alt={t(`works.items.${selectedImage.key}.title`)}
+              fill
+              className="object-contain"
+              sizes="100vw"
+              priority
+            />
+            <div className="absolute bottom-4 left-0 right-0 text-center text-white pointer-events-none">
+              <h3 className="font-bold text-lg drop-shadow-md">{t(`works.items.${selectedImage.key}.title`)}</h3>
+              <p className="text-white/90 text-sm drop-shadow-md">{t(`works.items.${selectedImage.key}.desc`)}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

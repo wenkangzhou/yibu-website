@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Gamepad2, Medal, Footprints, Bike, Sparkles } from "lucide-react";
+import { Gamepad2, Medal, Footprints, Bike, Award, Landmark, Sparkles } from "lucide-react";
 
 export function Achievements() {
   const { t } = useTranslation();
@@ -40,6 +40,22 @@ export function Achievements() {
       bgGradient: 'from-blue-50 to-cyan-50/50 dark:from-blue-950/30 dark:to-cyan-950/20',
       borderColor: 'border-blue-100 dark:border-blue-800',
     },
+    {
+      key: 'calligraphy',
+      icon: Award,
+      badge: '✍️',
+      gradient: 'from-violet-500 to-purple-500',
+      bgGradient: 'from-violet-50 to-purple-50/50 dark:from-violet-950/30 dark:to-purple-950/20',
+      borderColor: 'border-violet-100 dark:border-violet-800',
+    },
+    {
+      key: 'artExhibition',
+      icon: Landmark,
+      badge: '🎨',
+      gradient: 'from-pink-500 to-rose-500',
+      bgGradient: 'from-pink-50 to-rose-50/50 dark:from-pink-950/30 dark:to-rose-950/20',
+      borderColor: 'border-pink-100 dark:border-pink-800',
+    },
   ];
 
   return (
@@ -57,7 +73,7 @@ export function Achievements() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
           {achievements.map((achievement) => (
             <Card 
               key={achievement.key} 

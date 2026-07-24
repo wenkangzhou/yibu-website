@@ -9,7 +9,7 @@
   },
   "hero": {
     "greeting": "嗨，我是周翌步！",
-    "subtitle": "一个{{age}}的活力小男孩，喜欢小车、乐高、阅读和运动！",
+    "subtitle": "一个{{age}}的活力小男孩，喜欢艺术、乐高、阅读和运动！",
     "cta": "认识我",
     "loading": "加载中...",
     "mute": "静音",
@@ -25,7 +25,7 @@
     "class": "蝴蝶班（中班）",
     "languagesLabel": "语言能力",
     "languages": "中文、英文",
-    "description": "我是周翌步，一个充满活力的小男孩，喜欢探索周围的世界。我喜欢用乐高搭建、阅读有趣的书籍，还通过运动保持活力。"
+    "description": "我是周翌步，一个友善、有表达欲、富有想象力的小男孩。我喜欢唱歌跳舞、画画手工，也爱在舞台上表演；喜欢用乐高创造自己的小世界；喜欢沉浸在书本里；还喜欢跑步和骑车去探索世界。"
   },
   "hobbies": {
     "title": "我的爱好",
@@ -36,60 +36,121 @@
     },
     "lego": {
       "title": "乐高搭建",
-      "description": "我搭建过各种乐高城市系列6岁以下套装，还有法拉利赛车等。我喜欢创造自己的世界！"
+      "description": "每周一都有乐高课，我会按图纸搭建套装，也会用零散乐高拼出自己想象的作品，比如赛车和收纳盒。"
     },
     "reading": {
       "title": "阅读",
-      "description": "最近最爱读'Who Would Win'系列！描述两种动物的特点，最后进行搏斗，看谁能赢。太刺激了！"
+      "description": "阅读是我每天花最多时间的事情之一。中英文、听故事、看图画，我都能沉浸其中，享受书本带来的乐趣。"
     },
     "sports": {
       "title": "运动",
-      "description": "我喜欢运动！两岁多就能走很远的路，三岁在班级两公里跑步比赛中获得冠军，现在在学习骑自行车！"
+      "description": "我喜欢跑步，参加了两次越野跑还取得了不错的成绩；自行车也拆掉辅助轮啦，在空旷的地方骑得越来越自如。"
+    },
+    "artPerformance": {
+      "title": "艺术表演",
+      "description": "我对唱歌、跳舞、画画、手工和舞台表演都很有兴趣。上学期扮演了牛仔，下学期扮演了猎人，能自信又充满能量地完成表演。"
     }
   },
   "achievements": {
     "title": "我的成就",
     "subtitle": "记录成长的每一个精彩瞬间",
     "lego": {
-      "title": "乐高大师",
-      "description": "完成了各种乐高城市系列搭建，包括法拉利赛车"
+      "title": "乐高小创客",
+      "description": "不仅能完成固定套装搭建，还会用零散乐高创作自己的作品，比如赛车和自制收纳盒。"
     },
     "running": {
-      "title": "跑步冠军",
-      "description": "3岁时在班级两公里跑步比赛中获得第一名！"
+      "title": "越野跑小达人",
+      "description": "参加了两次青少年越野跑比赛，并在比赛中取得了不错的成绩，越跑越有信心！"
     },
     "walking": {
       "title": "小小行者",
       "description": "两岁多就开始和爸爸妈妈徒步，已经爬过好几座山了！"
     },
     "cycling": {
-      "title": "学骑自行车",
-      "description": "正在学习骑自行车，虽然还带着辅助轮"
+      "title": "骑行进步",
+      "description": "自行车已经可以拿掉辅助轮，在空旷的地方骑得不错，还在继续练习变得更自如。"
+    },
+    "calligraphy": {
+      "title": "硬笔书法证书",
+      "description": "获得了社会艺术水平硬笔书法壹级证书，一学年的控笔练习让中文书写进步很大。"
+    },
+    "artExhibition": {
+      "title": "美术馆展览",
+      "description": "在浦东美术馆 workshop 创作的艺术作品《游泳馆》被美术馆展览了一个多月，是很有意义的体验。"
     }
   },
   "works": {
     "title": "我的作品",
-    "subtitle": "来看看我的作品吧！",
-    "comingSoon": "即将上线",
-    "placeholder": "更多精彩内容即将添加，敬请期待！",
-    "placeholderTitle": "作品预览",
-    "placeholderImage": "图片占位",
+    "subtitle": "记录成长路上的点滴创作与精彩瞬间",
+    "categories": {
+      "all": "全部",
+      "performance": "舞台表演",
+      "art": "绘画手工",
+      "lego": "乐高创意",
+      "sports": "运动时刻",
+      "honors": "荣誉时刻"
+    },
+    "close": "关闭",
     "items": {
-      "lego": {
-        "title": "乐高作品集",
-        "desc": "我的创意搭建"
+      "dramaCowboy": {
+        "title": "戏剧《牛仔》",
+        "desc": "上学期的舞台表演"
       },
-      "art": {
-        "title": "绘画作品",
-        "desc": "色彩和想象"
+      "dramaHunter": {
+        "title": "戏剧《猎人》",
+        "desc": "下学期的舞台表演"
       },
-      "crafts": {
-        "title": "手工作品",
-        "desc": "创意手工"
+      "drawing": {
+        "title": "我的画",
+        "desc": "从圆圈到角色和场景"
       },
-      "photos": {
-        "title": "摄影作品",
-        "desc": "记录美好"
+      "legoRaceCar": {
+        "title": "乐高赛车",
+        "desc": "自己搭建的创意赛车"
+      },
+      "legoBox": {
+        "title": "自制收纳盒",
+        "desc": "用零散乐高拼出的实用作品"
+      },
+      "swimmingPool": {
+        "title": "艺术作品《游泳馆》",
+        "desc": "浦东美术馆 workshop 创作"
+      },
+      "calligraphy": {
+        "title": "硬笔书法证书",
+        "desc": "社会艺术水平壹级"
+      },
+      "trailRunning": {
+        "title": "越野跑",
+        "desc": "阳光下的奔跑"
+      },
+      "nightRace": {
+        "title": "夜间越野赛",
+        "desc": "戴头灯冲刺"
+      },
+      "cycling": {
+        "title": "骑自行车",
+        "desc": "已经拆掉辅助轮啦"
+      },
+      "runningRace": {
+        "title": "两公里亲子跑",
+        "desc": "小班六一活动，获得了不错的成绩"
+      },
+      "hikingYuelu": {
+        "title": "徒步岳麓山",
+        "desc": "和爸爸妈妈一起爬山"
+      },
+      "hikingMeiwu": {
+        "title": "徒步梅坞古道",
+        "desc": "在古道上探索自然"
+      },
+      "hikingMidui": {
+        "title": "徒步米堆山",
+        "desc": "挑战不一样的山路"
+      },
+      "hikingYushan": {
+        "title": "徒步虞山",
+        "desc": "享受户外徒步时光"
       }
     }
   },
