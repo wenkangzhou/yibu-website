@@ -22,6 +22,7 @@ const CITIES: Array<{
   { name: "桐庐", nameEn: "Tonglu", coordinates: [29.7988, 119.6855], country: "CN" },
   { name: "宁波", nameEn: "Ningbo", coordinates: [29.8683, 121.5440], country: "CN" },
   { name: "长沙", nameEn: "Changsha", coordinates: [28.2282, 112.9388], country: "CN" },
+  { name: "贵阳", nameEn: "Guiyang", coordinates: [26.6470, 106.6302], country: "CN" },
   { name: "昆明", nameEn: "Kunming", coordinates: [24.8801, 102.8329], country: "CN" },
   { name: "大理", nameEn: "Dali", coordinates: [25.5894, 100.2257], country: "CN" },
   { name: "温州", nameEn: "Wenzhou", coordinates: [27.9943, 120.6994], country: "CN" },
