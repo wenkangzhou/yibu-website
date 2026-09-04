@@ -22,7 +22,7 @@
     "birthday": "Born on August 30, 2021",
     "ageLabel": "Age",
     "school": "Hongqiao Haifu Kindergarten",
-    "class": "Butterfly Class (Middle Class)",
+    "class": "Zebra Class (Senior Class)",
     "languagesLabel": "Languages",
     "languages": "Chinese, English",
     "description": "I'm Yibu Zhou, a friendly, expressive, and imaginative little boy. I love singing, dancing, drawing, crafts, and performing on stage. I enjoy creating my own little worlds with LEGO, getting lost in books, and exploring the world through running and cycling."
@@ -111,6 +111,10 @@
       "legoBox": {
         "title": "DIY Storage Box",
         "desc": "A practical creation made from loose bricks"
+      },
+      "legoConstruction": {
+        "title": "Focused Building",
+        "desc": "Following the instructions step by step to build a construction vehicle"
       },
       "swimmingPool": {
         "title": "Artwork: Swimming Pool",

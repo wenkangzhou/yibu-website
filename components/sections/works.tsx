@@ -37,6 +37,7 @@ export function Works() {
       { id: 'swimmingPool', key: 'swimmingPool', category: 'art', src: '/assets/optimized/art/艺术作品-游泳馆.webp', aspectRatio: '4/3' },
       { id: 'legoRaceCar', key: 'legoRaceCar', category: 'lego', src: '/assets/optimized/lego/乐高-赛车.webp', aspectRatio: '4/3' },
       { id: 'legoBox', key: 'legoBox', category: 'lego', src: '/assets/optimized/lego/乐高-自制收纳盒.webp', aspectRatio: '4/3' },
+      { id: 'legoConstruction', key: 'legoConstruction', category: 'lego', src: '/assets/optimized/lego/乐高-拼接.webp', aspectRatio: '4/3' },
       { id: 'calligraphy', key: 'calligraphy', category: 'honors', src: '/assets/optimized/honors/硬笔书法证书.webp', aspectRatio: '3/2' },
       { id: 'trailRunning', key: 'trailRunning', category: 'sports', src: '/assets/optimized/sports/越野跑.webp', aspectRatio: '2/3' },
       { id: 'nightRace', key: 'nightRace', category: 'sports', src: '/assets/optimized/sports/越野跑-夜赛.webp', aspectRatio: '3/2' },
