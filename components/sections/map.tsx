@@ -31,6 +31,7 @@ const CITIES: Array<{
   { name: "绍兴", nameEn: "Shaoxing", coordinates: [30.0890, 120.5810], country: "CN" },
   { name: "广州", nameEn: "Guangzhou", coordinates: [23.1291, 113.2644], country: "CN" },
   { name: "湖州", nameEn: "Huzhou", coordinates: [30.8672, 120.1024], country: "CN" },
+  { name: "德清", nameEn: "Deqing", coordinates: [30.5449, 119.9599], country: "CN" },
   { name: "嘉兴", nameEn: "Jiaxing", coordinates: [30.7459, 120.7555], country: "CN" },
   { name: "宁海", nameEn: "Ninghai", coordinates: [29.2884, 121.4307], country: "CN" },
   // 日本
