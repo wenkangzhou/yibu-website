@@ -34,6 +34,7 @@ const CITIES: Array<{
   { name: "德清", nameEn: "Deqing", coordinates: [30.5449, 119.9599], country: "CN" },
   { name: "嘉兴", nameEn: "Jiaxing", coordinates: [30.7459, 120.7555], country: "CN" },
   { name: "宁海", nameEn: "Ninghai", coordinates: [29.2884, 121.4307], country: "CN" },
+  { name: "烟台", nameEn: "Yantai", coordinates: [37.4638, 121.4478], country: "CN" },
   // 日本
   { name: "大阪", nameEn: "Osaka", coordinates: [34.6937, 135.5022], country: "JP" },
   { name: "名古屋", nameEn: "Nagoya", coordinates: [35.1815, 136.9066], country: "JP" },

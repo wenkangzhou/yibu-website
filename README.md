@@ -134,6 +134,9 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
 
 ## 📝 更新日志
 
+### 2026-10-06
+- 🗺️ 新增城市：烟台（中国 22 个，共 27 个城市标记）
+
 ### 2026-03-12
 - 🗺️ 新增交互式足迹地图
 - 🗺️ 基于 Leaflet + Carto 的地图展示
