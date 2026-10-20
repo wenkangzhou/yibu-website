@@ -44,7 +44,7 @@
     },
     "sports": {
       "title": "Sports",
-      "description": "I love running! I joined two youth trail races and did well. I've also taken off my training wheels and can ride my bike confidently in open spaces."
+      "description": "I love running! I joined two youth trail races and did well. I've also taken off my training wheels and can ride my bike confidently in open spaces. This semester I started learning chess and flag football, too."
     },
     "artPerformance": {
       "title": "Art & Performance",
@@ -123,6 +123,14 @@
       "calligraphy": {
         "title": "Calligraphy Certificate",
         "desc": "Grade 1 Arts Certificate"
+      },
+      "chess": {
+        "title": "Chess",
+        "desc": "Started learning this semester and playing with classmates"
+      },
+      "flagFootball": {
+        "title": "Flag Football",
+        "desc": "Started learning and practicing with classmates this semester"
       },
       "trailRunning": {
         "title": "Trail Running",

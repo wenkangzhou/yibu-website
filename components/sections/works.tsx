@@ -39,6 +39,8 @@ export function Works() {
       { id: 'legoBox', key: 'legoBox', category: 'lego', src: '/assets/optimized/lego/乐高-自制收纳盒.webp', aspectRatio: '4/3' },
       { id: 'legoConstruction', key: 'legoConstruction', category: 'lego', src: '/assets/optimized/lego/乐高-拼接.webp', aspectRatio: '4/3' },
       { id: 'calligraphy', key: 'calligraphy', category: 'honors', src: '/assets/optimized/honors/硬笔书法证书.webp', aspectRatio: '3/2' },
+      { id: 'chess', key: 'chess', category: 'sports', src: '/assets/sports/chess.jpg', aspectRatio: '16/9' },
+      { id: 'flagFootball', key: 'flagFootball', category: 'sports', src: '/assets/sports/flag-football.jpg', aspectRatio: '9/16' },
       { id: 'trailRunning', key: 'trailRunning', category: 'sports', src: '/assets/optimized/sports/越野跑.webp', aspectRatio: '2/3' },
       { id: 'nightRace', key: 'nightRace', category: 'sports', src: '/assets/optimized/sports/越野跑-夜赛.webp', aspectRatio: '3/2' },
       { id: 'cycling', key: 'cycling', category: 'sports', src: '/assets/optimized/sports/运动-骑自行车-无辅助轮.webp', aspectRatio: '3/4' },
