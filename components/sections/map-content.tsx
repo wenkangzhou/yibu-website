@@ -149,11 +149,10 @@ export function MapContent({ cities }: MapContentProps) {
         style={{ width: "100%", height: "100%" }}
         zoomControl={false}
       >
-        {/* Carto 瓦片图层 - 显示街道、道路等详细信息 */}
+        {/* OpenStreetMap 标准底图，无需 API key */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-          subdomains="abcd"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           maxZoom={19}
         />
         

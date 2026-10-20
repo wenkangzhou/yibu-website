@@ -27,25 +27,28 @@ export function Navbar() {
   const { t } = useTranslation();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // SSR 和弱网加载期间先显示实色背景，客户端接管后再按滚动位置切换。
+  const [scrolled, setScrolled] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const logoHref = pathname === '/' ? '#home' : '/';
+  const solidNavbar = pathname !== '/' || scrolled;
 
   return (
     <>
-      {/* Main Navbar - Fixed and Transparent */}
+      {/* Main Navbar */}
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-background/90 backdrop-blur-md shadow-sm' 
+          solidNavbar
+            ? 'bg-background shadow-sm'
             : 'bg-transparent'
         }`}
       >
@@ -54,7 +57,7 @@ export function Navbar() {
           <div className="flex items-center">
             <a href={logoHref} className="flex items-center space-x-2">
               <span className={`font-bold text-xl transition-colors duration-300 ${
-                scrolled 
+                solidNavbar
                   ? 'bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent' 
                   : 'text-white drop-shadow-lg'
               }`}>
@@ -70,19 +73,19 @@ export function Navbar() {
                 <NavLink
                   key={item.key}
                   item={item}
-                  scrolled={scrolled}
+                  scrolled={solidNavbar}
                   onClick={() => setMobileMenuOpen(false)}
                 />
               ))}
             </div>
             <div className="flex items-center space-x-1">
               <LanguageSwitcher 
-                className={scrolled ? '' : 'text-white hover:bg-white/10 hover:text-white'}
-                iconClassName={scrolled ? '' : 'drop-shadow-sm'}
+                className={solidNavbar ? '' : 'text-white hover:bg-white/10 hover:text-white'}
+                iconClassName={solidNavbar ? '' : 'drop-shadow-sm'}
               />
               <ThemeToggle 
-                className={scrolled ? '' : 'text-white hover:bg-white/10 hover:text-white'}
-                iconClassName={scrolled ? '' : 'drop-shadow-sm'}
+                className={solidNavbar ? '' : 'text-white hover:bg-white/10 hover:text-white'}
+                iconClassName={solidNavbar ? '' : 'drop-shadow-sm'}
               />
             </div>
           </div>
@@ -90,17 +93,17 @@ export function Navbar() {
           {/* Mobile Navigation Toggle */}
           <div className="flex flex-1 items-center justify-end md:hidden">
             <LanguageSwitcher 
-              className={scrolled ? '' : 'text-white hover:bg-white/10 hover:text-white'}
-              iconClassName={scrolled ? '' : 'drop-shadow-sm'}
+              className={solidNavbar ? '' : 'text-white hover:bg-white/10 hover:text-white'}
+              iconClassName={solidNavbar ? '' : 'drop-shadow-sm'}
             />
             <ThemeToggle 
-              className={scrolled ? '' : 'text-white hover:bg-white/10 hover:text-white'}
-              iconClassName={scrolled ? '' : 'drop-shadow-sm'}
+              className={solidNavbar ? '' : 'text-white hover:bg-white/10 hover:text-white'}
+              iconClassName={solidNavbar ? '' : 'drop-shadow-sm'}
             />
             <Button
               variant="ghost"
               size="icon"
-              className={`ml-1 ${scrolled ? '' : 'text-white hover:bg-white/10 hover:text-white'}`}
+              className={`ml-1 ${solidNavbar ? '' : 'text-white hover:bg-white/10 hover:text-white'}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (

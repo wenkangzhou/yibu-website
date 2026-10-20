@@ -103,7 +103,7 @@ export function TravelMap() {
             </div>
           </div>
 
-          <div className="relative max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-border">
+          <div className="relative isolate z-0 max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-border">
             <div className="aspect-[16/9] w-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
               <div className="text-slate-400 text-center">
                 <span className="text-4xl">🗺️</span>
@@ -145,7 +145,7 @@ export function TravelMap() {
         </div>
 
         {/* 地图容器 - 移除图例，只在地图内部显示 */}
-        <div className="relative max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-border">
+        <div className="relative isolate z-0 max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-border">
           <MapContent cities={CITIES} />
         </div>
       </div>
